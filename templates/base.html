@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}{% endblock %}</title>
+    <link rel="shortcut icon" href="{{ url_for('static', filename='img/favicon.ico') }}">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"></link>
+    <style>
+    html, body{
+    	scroll-behavior: smooth;
+    	margin: 0;
+    	padding: 0;
+    }
+    .btn
+    {
+        margin-top: 3px;
+    }
+    audio
+    {
+        margin-bottom: 40px;
+    }
+    .copyrightText
+    {
+        position: fixed;
+        width: 100% !important;
+        background: #181818;
+        padding: 8px 100px !important;
+        text-align: center;
+        color: #999;
+        bottom: 0 !important;
+    }
+    .sideblock
+    {
+        background-color: coral;
+        font-size: large;
+        position: fixed;
+        bottom: 0 !important;
+        right: 4% !important;
+        top: 1% !important;
+    }
+    .sideblock ul
+    {
+    	padding: 100% 6px 100% 30px !important;
+    }
+    .maincontent
+    {
+    	padding-right: 150px !important; 
+    	margin: 0 !important;
+    }
+    @media (max-width: 611px)
+    {
+    	.sideblock
+    	{
+    		background-size: 100% !important;
+    		position: relative;
+    	}
+    	.sideblock ul
+    	{
+    		padding: 20px 40px 160px 60px !important;
+    	}
+    	.maincontent
+    	{
+    		padding-right: 0 !important;
+    	}
+    }
+    .nav-item
+    {
+    	font-size: 22px;
+    }
+    </style>
+</head>
+<body>
+    <div class="container maincontent">
+        <nav style="margin-top: 20px !important;" class="navbar navbar-expand-lg navbar-light bg-light">
+            <a class="navbar-brand" href="/">
+                <img src="{{url_for('static', filename='img/logo.png')}}" width="30" height="30" class="d-inline-block align-top" alt="Change Your Voice" />
+                Change your voice |
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mr-auto">
+	                <li class="nav-item active">
+	                    <a class="nav-link" href="/">
+                            <img style="padding: 0 3px 5px 0;" src="{{url_for('static', filename='img/house-fill.svg')}}" alt="Home" width="24" height="24" />Home
+                        </a>
+	                </li>
+	                <li class="nav-item active">
+	                    <a class="nav-link" href="/about">
+                            <img style="padding: 0 3px 4px 0;" src="{{url_for('static', filename='img/file-person.svg')}}" alt="About Us" width="22" height="22" />About Us
+                        </a>
+	                </li>
+            	</ul>
+            </div>
+        </nav>
+        {% block content %}{% endblock %}
+    </div>
+
+	<div class="sideblock">
+        <ul>
+            <strong><h3>Credits: </h3></strong>
+            <li><strong>Iron Man</strong></li>
+            <li><strong>Google</strong></li>
+            <li>Chrome Browser</li>
+            <li>Speech to text api</li>
+            <li>Flask</li>
+            <li>Bootstrap 4</li>
+        </ul>
+    </div>
+    <div class="copyrightText">
+            This web application is developed by <strong style="color: #ffff;">Mr.Tanmay Eknath Mahale</strong>
+    </div>
+</body>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="{{ url_for('static', filename='js/script.js') }}"></script>
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+</html>
