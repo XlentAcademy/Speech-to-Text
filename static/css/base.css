@@ -1,0 +1,144 @@
+@import "https://fonts.googleapis.com/css?family=Lato:100";
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+html,body{
+    font-size: 10px;
+    font-family: "Lato", Arial, sans-serif;
+    width: 100%;
+    height: 100vh;
+    color: #fff;
+    background: linear-gradient(-45deg, #EE7752, #E73C7E, #23A6D5, #23D5AB);
+    background-size: 400% 400%;
+    position: relative;
+    animation: change 10s ease-in-out infinite;
+}
+@keyframes change{
+    0%{
+        background-position: 0 50%;
+    }
+    50%{
+        background-position: 100% 50%;
+    }
+    100%{
+        background-position: 0 50%;
+    }
+}
+
+.ad{
+    background-color: aliceblue;
+    width: auto;
+    height: 10% !important;
+    border: darkgray;
+    border-style: dashed;
+    color: dimgrey;
+}
+.top{
+    margin-top: 10px !important;
+}
+
+.navis{
+    /* position: absolute; */
+    padding: 20px 40px 0 40px !important;
+}
+.navbar{
+    border-radius: 25px !important;
+    /* bottom: 0 !important; */
+}
+.navbar-brand{
+    padding-left: 16px !important;
+    font-size: 20px !important;
+}
+.nav-item
+{
+    font-size: 22px;
+}
+
+section{
+    position: relative !important;
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    background-attachment: fixed !important;
+    height: 86vh !important;
+}
+section .box{
+    position: relative !important;
+    height: 450px !important;
+    width: 1000px !important;
+    padding: 50px !important;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, .5) !important;
+    overflow: hidden !important;
+}
+section .box h2{
+    position: relative;
+    margin: 0 0 20px;
+    padding: 0;
+    font-size: 48px;
+    text-transform: uppercase;
+    z-index: 2;
+}
+.btn{
+    font-size: 14px !important;
+}
+#textbox{
+    font-size: 14px !important;
+}
+#instructions{
+    font-size: 20px !important;
+}
+
+.huge{
+    text-align: center;
+    align-items: center;
+    align-content: center;
+    font-size: 5rem;
+    text-decoration: underline;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: #fff;
+    border: 3px solid #fff;
+    position: relative;
+    padding: 5rem 10rem;
+}
+.para{
+    color:bisque;
+    padding-top: 30px !important;
+    position: relative;
+    margin: 0;
+    padding: 0;
+    font-size: 18px;
+    text-transform: uppercase;
+    z-index: 2;
+}
+
+.alert{
+    font-size: 20px !important;
+}
+.alertbox{
+    padding: 6px 25% 0 25% !important;
+}
+.close{
+    font-size: 25px !important;
+}
+
+@media (max-width: 611px)
+{
+    section .box{
+        position: relative;
+        box-shadow: 0 !important;
+        height: 430px !important;
+        padding: 20px !important;
+    }
+    .alert{
+        font-size: 10px !important;
+    }
+    .close{
+        font-size: 20px !important;
+    }
+}
